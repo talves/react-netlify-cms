@@ -1,0 +1,11 @@
+backend:
+  name: github
+  repo: talves/react-static-netlify-cms
+
+media_folder: "public/images"
+public_folder: "images"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "docs" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Document" # Used in the UI, ie.: "New Post"
+    folder: "documentation"
