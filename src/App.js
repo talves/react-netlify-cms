@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
+import Loadable from 'react-loadable';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
 
-import { init, registry } from 'netlify-cms/dist/init';
-import 'netlify-cms/dist/cms.css';
-import config from './config.json'
+const AsyncCMS = Loadable({
+  loader: () => import('./components/NetlifyCMS'),
+  loading: () => <div>Loading...</div>,
+});
 
 class App extends Component {
-  componentDidMount () {
-    init({config});
-  }
   render() {
     return (
-      <div />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/admin/" exact component={AsyncCMS} />
+        </Switch>
+      </Router>
     );
   }
 }
 
-export default App;
+export default App
