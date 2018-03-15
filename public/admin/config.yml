@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: talves/react-static-netlify-cms
+  repo: talves/react-netlify-cms
 
 media_folder: "public/images"
 public_folder: "images"
