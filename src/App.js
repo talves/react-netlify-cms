@@ -11,12 +11,14 @@ const AsyncCMS = Loadable({
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/admin/" exact component={AsyncCMS} />
-        </Switch>
-      </Router>
+      <div id="no-auto">
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/admin/" exact component={AsyncCMS} />
+          </Switch>
+        </Router>
+      </div>
     );
   }
 }

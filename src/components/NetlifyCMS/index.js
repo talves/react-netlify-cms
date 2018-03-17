@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { init, registry } from 'netlify-cms/dist/init';
+import CMS from 'netlify-cms/dist/cms';
 import 'netlify-cms/dist/cms.css';
 import config from './config.json'
 
 class NetlifyCMS extends Component {
   componentDidMount () {
-    init({config});
+    CMS.init({config});
+  }
+  componentWillUnmount () {
+    console.log('NetlifyCMS componentWillUnmount')
+    CMS.reset();
   }
   render() {
     return (
