@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-[NetlifyCMS](https://www.netlifycms.org/) was added to the project using the [Beta Features](https://www.netlifycms.org/docs/beta-features/) of version 1.3.5
+[NetlifyCMS](https://www.netlifycms.org/) was added to the project using the [Beta Features](https://www.netlifycms.org/docs/beta-features/) of version 1.3.6
+
+**Note:** Currently the import is being take from a yarn file link with the branch checked out, until release 1.3.6
 
 ## Original README.md below
 
